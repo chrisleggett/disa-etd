@@ -42,7 +42,7 @@ global:
 pingfederate-admin:
   enabled: true
   envs:
-    SERVER_PROFILE_URL: https://github.com/chrisleggett/mtls-example.git
+    SERVER_PROFILE_URL: https://github.com/chrisleggett/disa-etd.git
     SERVER_PROFILE_PATH: server-profile/pingfederate
     PF_ENGINE_PRIVATE_PORT_SEC_HTTPS: "9032"
     PF_COOKIE_DOMAIN: ".pingchanneldemo.com"
@@ -55,7 +55,7 @@ pingfederate-admin:
 pingfederate-engine:
   enabled: true
   envs:
-    SERVER_PROFILE_URL: https://github.com/chrisleggett/mtls-example.git
+    SERVER_PROFILE_URL: https://github.com/chrisleggett/disa-etd.git
     SERVER_PROFILE_PATH: server-profile/pingfederate
     PF_ENGINE_PRIVATE_PORT_HTTPS: "9031"
     PF_ENGINE_PRIVATE_PORT_SEC_HTTPS: "9032"
