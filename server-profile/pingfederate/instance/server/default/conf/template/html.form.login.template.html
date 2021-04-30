@@ -68,8 +68,8 @@ is not recommended as it may interfere with expected server behavior.
     if there is a logo present in the 'company-logo' container,
     then 'has-logo' class should be added to 'ping-header' container.
     -->
-    <div class="ping-header.has-logo">
-        <span class="company-logo"><img src="assets/images/disa-logo.png"></span>
+    <div class="ping-header>
+        <span class="company-logo"></span>
         $templateMessages.getMessage($messageKeyPrefix, "title")
     </div>
     <!-- .ping-header -->
@@ -100,7 +100,7 @@ is not recommended as it may interfere with expected server behavior.
                     <div class="content-column column-1">
 
                         <div class="column-title">
-                            $templateMessages.getMessage($messageKeyPrefix, "title")
+                            <img src="assets/images/disa-logo.png" height="52">
                         </div>
                 #end
 
