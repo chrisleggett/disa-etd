@@ -4265,6 +4265,9 @@ body .button-container .social-media.faceid {
 body .button-container .social-media.logingov {
   background-image: url("../images/login.gov.svg");
 }
+body .button-container .social-media.pivcac {
+  background-image: url("../images/smartcard.png");
+}
 body.mobile .ping-signin .remember-username,
 body.mobile .ping-signin .my-computer {
   display: none;

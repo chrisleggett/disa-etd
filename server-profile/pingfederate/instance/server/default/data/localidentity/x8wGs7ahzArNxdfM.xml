@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <loc:localIdentity profileId="x8wGs7ahzArNxdfM" profileName="LocalIdentityPolicy" contractId="p18qP6kOnVc8hSIb" profileEnabled="false" registrationEnabled="false" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
     <loc:auth-sources>
-        <loc:auth-source id="mms98HqJN0xID5Nq" name="x509">
+        <loc:auth-source id="mms98HqJN0xID5Nq" name="PIV / CAC">
             <loc:update-policy attributeStorageEnabled="false" retainAttributes="false" updateAttributes="false" updateInterval="0.0"/>
         </loc:auth-source>
         <loc:auth-source id="zujkD31rY7TrxIi2" name="Login.gov">

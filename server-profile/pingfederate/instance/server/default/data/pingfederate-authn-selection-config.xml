@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1619744103240" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1619749777786" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="m365" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -9,8 +9,8 @@
                     <urn:attributeRule>
                         <urn:IncomingAttr>policy.action</urn:IncomingAttr>
                         <urn:Operand>EQUALS</urn:Operand>
-                        <urn:ExpectedValue>x509</urn:ExpectedValue>
-                        <urn:Result>x509</urn:Result>
+                        <urn:ExpectedValue>PIV / CAC</urn:ExpectedValue>
+                        <urn:Result>PIV / CAC</urn:Result>
                     </urn:attributeRule>
                     <urn:attributeRule>
                         <urn:IncomingAttr>policy.action</urn:IncomingAttr>
@@ -23,7 +23,7 @@
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                 </urn:AstChild>
-                <urn:AstChild context="x509">
+                <urn:AstChild context="PIV / CAC">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">x509ID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
