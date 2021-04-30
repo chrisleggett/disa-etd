@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="TwillioAPI" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Account SID">AC9bb404aab4bbf90e7dcabf782d75a3b5</urn:Field>
+        <urn:Field name="Auth Token">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..ucY5c_tq9n2C5sMJWo-k9Q.oQefm9jRAHJczTUcaN8wNUPLlVwt97RDMvzQVTCY4kqUKqpzDIIqh3aNhA6BbmfX.eKUQrVvgF_SpbjbI8iXQiQ</urn:Field>
+        <urn:Field name="From Number">+14848813027</urn:Field>
+        <urn:Field name="Delivery Method">SMS</urn:Field>
+        <urn:Field name="Block VoIP Numbers">false</urn:Field>
+        <urn:Field name="Blocked Numbers">+1800,+1888,+1877,+1866,+1855,+1844,+1833</urn:Field>
+        <urn:Field name="Test Phone">+15713894018</urn:Field>
+        <urn:Field name="Messages File">twilio-programmable-api-publisher-messages</urn:Field>
+        <urn:Field name="Voice Option">Woman</urn:Field>
+        <urn:Field name="Other Voice Option"/>
+        <urn:Field name="API Request Timeout">5000</urn:Field>
+        <urn:Field name="Connection Timeout">5000</urn:Field>
+        <urn:Field name="Proxy Settings">System Defaults</urn:Field>
+        <urn:Field name="Custom Proxy Host"/>
+        <urn:Field name="Custom Proxy Port"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Messages File">twilio-programmable-api-publisher-messages</urn:Field>
+        <urn:Field name="Voice Option">Woman</urn:Field>
+        <urn:Field name="Other Voice Option"/>
+        <urn:Field name="API Request Timeout">5000</urn:Field>
+        <urn:Field name="Connection Timeout">5000</urn:Field>
+        <urn:Field name="Proxy Settings">System Defaults</urn:Field>
+        <urn:Field name="Custom Proxy Host"/>
+        <urn:Field name="Custom Proxy Port"/>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+</urn:PluginConfiguration>

@@ -3,6 +3,7 @@
     <con:map name="IdpAuthnAdapterInstances">
         <con:item name="11">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
         <con:item name="x509ID">com.pingidentity.adapters.idp.clientcert.ClientCertIdpAuthnAdapter</con:item>
+        <con:item name="OTP">com.pingidentity.adapters.otpadapter.OTPIdpAdapter</con:item>
     </con:map>
     <con:map name="SpAuthnAdapterInstances">
         <con:item name="partnerSPadpt">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>

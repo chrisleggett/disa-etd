@@ -64,6 +64,8 @@
     <map name="SslServerPrivateKeyPasswords">
         <item name="vtcm75en83g6v1r87ytm7lihi">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiI5LjIuMS4xIn0..q5SNjNZ8GzcbMiAgNvIPMA.o08oe4lvJupvnusn1Igxb4voYG7sQ6NvC5YLRNxC46M.47YH19lW8wvMoGUHMITBJA</item>
         <item name="2bytg2xlagm73yi3e1k03g3wf">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..7bf6ietYwb9jOfToNZuZrQ.hnMGjTp0UNgNFWGfiIvdSSmtC9gOazM6FQOZ3UOGGgg.gAgX-DST0WwUs1cif4ufLQ</item>
+        <item name="42ohqq0qjp17wk9orcb6ut0t8">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..2stnpM43tFgcZIIP9CThZA.fRFIKHJkhXVcJhf7BOQ2TGaHsXN2P6c5Vq_sTBRQqXg.4UD73Q5Uqr5irFfANC4DjQ</item>
+        <item name="mvnypuubjwi1s894lz1jegluo">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..MeM3SfrIKhHB1Qq3mNRwhA.p3VK_zM-EtaHXhFQ0eSIfIHHY4qlSgn398SjkdugFbo.7qMUxn4vTtMAfnWHfVoGqA</item>
     </map>
     <!--SSL HSM Server Keystore information: name and password-->
     <item name="SslServerHSMKeystoreName">ping-ssl-server.hsmks</item>

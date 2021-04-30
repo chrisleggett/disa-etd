@@ -16,8 +16,8 @@
         <urn:Field name="Password Reset Policy Contract"/>
         <urn:Field name="Revoke Sessions After Password Change Or Reset">false</urn:Field>
         <urn:Field name="Account Unlock">false</urn:Field>
-        <urn:Field name="Local Identity Profile"/>
-        <urn:Field name="Notification Publisher"/>
+        <urn:Field name="Local Identity Profile">x8wGs7ahzArNxdfM</urn:Field>
+        <urn:Field name="Notification Publisher">TwillioVerify</urn:Field>
         <urn:Field name="Enable Username Recovery">false</urn:Field>
         <urn:Field name="Login Template">html.form.login.template.html</urn:Field>
         <urn:Field name="Logout Path"/>
@@ -99,13 +99,15 @@
     </urn:Tables>
     <urn:ExtendedContractAttributes>
         <urn:AttributeName>clientid</urn:AttributeName>
+        <urn:AttributeName>phone</urn:AttributeName>
         <urn:AttributeName>email</urn:AttributeName>
     </urn:ExtendedContractAttributes>
     <urn:UniqueKeyField>username</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="clientid" Type="Adapter" Value="clientid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="phone" Type="Text" Value="+15713894018" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="policy.action" Type="Adapter" Value="policy.action" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="email" Type="Adapter" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="email" Type="Text" Value="bob@pingchanneldemo.com" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>

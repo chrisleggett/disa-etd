@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" uniqueUserKeyField="pf_none" isInheritExtendedContractAttributes="false" name="OTP" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Device Selection">User Choice</urn:Field>
+        <urn:Field name="Preferred Delivery Method Attribute"/>
+        <urn:Field name="Attribute Source">Chained Attributes</urn:Field>
+        <urn:Field name="Search String"/>
+        <urn:Field name="Base DN"/>
+        <urn:Field name="Test User ID"/>
+        <urn:Field name="Failure Mode">Block User</urn:Field>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..xjVOTYhk-VdNwaK5KI9cMQ.hx7T0sliy9Y99NdU_eggYxyw9yPjYF4LtX6CMAaKXmoGBmpySTx3VDc0zw6Alutc.bAGujCHynWDDl86A2j3VLA</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..bSO8se7u8yt9xNXAIMSqqA.NX2dbB_sEfxoJKi1tJxh79sNdSyksIapZfgc-bx3m5b8bTx3GofyPpKq_67lzRU-.opwe7bdF5RP7k5UdI8YFBw</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Notification Delivery Methods">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Notification Publisher">TwillioAPI</urn:Field>
+                <urn:Field name="Contact Attribute">phone</urn:Field>
+                <urn:Field name="Language Properties and Templates Key">SMS</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes/>
+    <urn:UniqueKeyField>username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="otp_method" Type="Adapter" Value="otp_method" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="otp_target" Type="Adapter" Value="otp_target" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="status" Type="Adapter" Value="status" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

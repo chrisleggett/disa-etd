@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="https://idp.int.identitysandbox.gov/" urn:name="LoginDotGov OIDC" ID="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="10.2.2.0" LicenseGroup="">
+            <urn:DigitialSignatureAliases/>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <urn:enableAutoMetadataUpdate>false</urn:enableAutoMetadataUpdate>
+            <urn:alwaysSignArtifactResponse>false</urn:alwaysSignArtifactResponse>
+            <urn:AdditionalAllowedEntitiesConfiguration>
+                <urn:AllowAdditionalEntities>false</urn:AllowAdditionalEntities>
+                <urn:AllowAllEntities>false</urn:AllowAllEntities>
+                <urn:AdditionalAllowedEntities/>
+            </urn:AdditionalAllowedEntitiesConfiguration>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:IDPSSODescriptor protocolSupportEnumeration="OIDC" WantAuthnRequestsSigned="false">
+        <md:Extensions>
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2021-04-30T00:45:04.547Z">
+                <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
+                <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
+                    <urn:ConnectionContractMapping C2cContractId="p18qP6kOnVc8hSIb" C2cContractName="m365" RestrictVirtualServerIds="false">
+                        <urn:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="subject" Type="Provider Claims" Value="sub"/>
+                        <urn:TokenAuthorizationIssuanceCriteria/>
+                    </urn:ConnectionContractMapping>
+                    <urn:AccountLinkingAndMapping Type="mapping" IncludeAdditionalAttributes="false"/>
+                    <urn:ErrPageMsg>errorDetail.spSsoFailure</urn:ErrPageMsg>
+                </urn:IDP>
+            </urn:RoleExtension>
+        </md:Extensions>
+        <md:SingleSignOnService Binding="oauth:authz" Location="https://idp.int.identitysandbox.gov/openid_connect/authorize"/>
+        <saml:Attribute Name="email_verified" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="address" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="birthdate" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="iss" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="x509_subject" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="given_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="phone_verified" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="phone" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="verified_at" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="x509_issuer" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="social_security_number" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="family_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="x509_presented" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    </md:IDPSSODescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="OIDC" xsi:type="urn:PFOIDCRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <md:Extensions>
+            <urn:RoleExtension LastModified="2021-04-30T00:45:04.547Z"/>
+        </md:Extensions>
+        <urn:OpenIDConnectSettings>
+            <urn:TokenEndpoint>https://idp.int.identitysandbox.gov/api/openid_connect/token</urn:TokenEndpoint>
+            <urn:JWKSUri>https://idp.int.identitysandbox.gov/api/openid_connect/certs</urn:JWKSUri>
+            <urn:Scopes>address email openid phone profile profile:birthdate profile:name profile:verified_at social_security_number x509 x509:subject x509:issuer x509:presented</urn:Scopes>
+            <urn:Profile>BASIC</urn:Profile>
+            <urn:UserInfoEndpoint>https://idp.int.identitysandbox.gov/api/openid_connect/userinfo</urn:UserInfoEndpoint>
+            <urn:ClientID>https://pingfederate-engine-disa-etd.pingchanneldemo.com</urn:ClientID>
+            <urn:ClientSecret xsi:nil="true"/>
+            <urn:BasicAuth>false</urn:BasicAuth>
+            <urn:PrivateJwtAuth>true</urn:PrivateJwtAuth>
+            <urn:SigningAlgorithm>RS256</urn:SigningAlgorithm>
+            <urn:RequestParam>
+                <urn:Name>acr_values</urn:Name>
+                <urn:Value>http://idmanagement.gov/ns/assurance/ial/1 http://idmanagement.gov/ns/assurance/aal/2</urn:Value>
+                <urn:Override>true</urn:Override>
+            </urn:RequestParam>
+        </urn:OpenIDConnectSettings>
+    </md:RoleDescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

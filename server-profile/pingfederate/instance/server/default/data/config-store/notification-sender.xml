@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="notification-sender">
+        <con:item name="TwillioAPI">com.pingidentity.notificationpublisher.twilio.TwilioProgrammableAPINotificationPublisher</con:item>
+        <con:item name="TwillioVerify">com.pingidentity.notificationpublisher.twilio.TwilioVerifyAPINotificationPublisher</con:item>
+    </con:map>
+    <con:map name="notification-sender-parents"/>
+    <con:item name="notification-sender-default">TwillioVerify</con:item>
+</con:config>
