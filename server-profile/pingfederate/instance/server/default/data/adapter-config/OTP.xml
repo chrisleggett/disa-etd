@@ -14,7 +14,7 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
-        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..xjVOTYhk-VdNwaK5KI9cMQ.hx7T0sliy9Y99NdU_eggYxyw9yPjYF4LtX6CMAaKXmoGBmpySTx3VDc0zw6Alutc.bAGujCHynWDDl86A2j3VLA</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..xpUdYxyQZ9GUy2Tr1M0lDQ.aBvOyVf7ErGR2O3q7c1PpfeILEk1j9Vfpgxvgr9rZ9Rz5nmux5Swvr75rrFViWYB.jt3n3JjeHpybf6UHlgn8yw</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="OTP Length">6</urn:Field>
@@ -23,14 +23,14 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
-        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..bSO8se7u8yt9xNXAIMSqqA.NX2dbB_sEfxoJKi1tJxh79sNdSyksIapZfgc-bx3m5b8bTx3GofyPpKq_67lzRU-.opwe7bdF5RP7k5UdI8YFBw</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4yLjIuMCJ9..TJWLaR-4jjU12hiSYsCt1g.Ea0YOWlgBPnq1saX30Z-EB_t1bbknxLwfXi8uIgIQYRxX0A7MPwLdsC0IubJB_GU.UWroN-xdTK1By4IFD9BHSQ</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Notification Delivery Methods">
             <urn:Row defaultRow="false">
                 <urn:Field name="Notification Publisher">TwillioAPI</urn:Field>
                 <urn:Field name="Contact Attribute">phone</urn:Field>
-                <urn:Field name="Language Properties and Templates Key">SMS</urn:Field>
+                <urn:Field name="Language Properties and Templates Key">sms</urn:Field>
             </urn:Row>
         </urn:Table>
     </urn:Tables>
