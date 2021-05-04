@@ -20,17 +20,15 @@
         <urn:Table name="Constrain Acceptable Root Issuers"/>
     </urn:Tables>
     <urn:ExtendedContractAttributes>
-        <urn:AttributeName>RFC822Name</urn:AttributeName>
-        <urn:AttributeName>SubjectAltName</urn:AttributeName>
+        <urn:AttributeName>userPrincipalName</urn:AttributeName>
     </urn:ExtendedContractAttributes>
-    <urn:UniqueKeyField>RFC822Name</urn:UniqueKeyField>
+    <urn:UniqueKeyField>userPrincipalName</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="IssuerDN" Type="Adapter" Value="IssuerDN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="RFC822Name" Type="Adapter" Value="RFC822Name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="SerialNumber" Type="Adapter" Value="SerialNumber" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="SubjectAltName" Type="Adapter" Value="SubjectAltName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="SubjectDN" Type="Adapter" Value="SubjectDN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="email" Type="Adapter" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="userPrincipalName" Type="Adapter" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="ClientCertificateChain" Type="Adapter" Value="ClientCertificateChain" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>

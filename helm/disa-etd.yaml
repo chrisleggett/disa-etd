@@ -48,6 +48,9 @@ pingfederate-admin:
     PF_COOKIE_DOMAIN: ".ping-devops.com"
     PF_CONSOLE_AUTHENTICATION: "NATIVE"
     PF_ADMIN_API_AUTHENTICATION: NATIVE
+  container:
+    nodeSelector:
+      kubernetes.io/hostname: ip-10-52-83-229.us-east-2.compute.internal
 
     
 
@@ -60,6 +63,9 @@ pingfederate-engine:
     PF_ENGINE_PRIVATE_PORT_HTTPS: "9031"
     PF_ENGINE_PRIVATE_PORT_SEC_HTTPS: "9032"
     PF_COOKIE_DOMAIN: ".ping-devops.com"
+  container:
+    nodeSelector:
+      kubernetes.io/hostname: ip-10-52-83-229.us-east-2.compute.internal    
   services:
     mtls:
       servicePort: 9032

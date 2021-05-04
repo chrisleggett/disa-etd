@@ -105,10 +105,16 @@
     <urn:UniqueKeyField>username</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="clientid" Type="Adapter" Value="clientid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="phone" Type="Text" Value="+15713894018" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="phone" Type="LDAP" AttributeSourceId="AD" Value="telephoneNumber" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="policy.action" Type="Adapter" Value="policy.action" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="email" Type="Text" Value="bob@pingchanneldemo.com" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-2BCBE93812F6E0D46BD3052E63F557E7309EF1BF" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="sAMAccountName=${username}"/>
+            <urn1:Parameter Name="search_base" Value="dc=pingchanneldemo,dc=com"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>
 </urn:AdapterConfiguration>

@@ -20,15 +20,15 @@
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="WSFED" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="false">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2021-04-29T20:47:41.972Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2021-05-04T15:55:16.183Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="true" SPInitiatedSSO="true" SPInitiatedSLO="true"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
                     <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="p18qP6kOnVc8hSIb" C2cContractName="m365">
                         <urn:DefaultAttributeMapping>
-                            <urn:AttributeMap Name="UPN" Type="Text" Value="bob@pingchanneldemo.com"/>
-                            <urn:AttributeMap Name="ImmutableID" Type="Text" Value=" Q3hSv8SEz0ue/Q4deF/yFw=="/>
-                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Text" Value=" Q3hSv8SEz0ue/Q4deF/yFw=="/>
+                            <urn:AttributeMap Name="UPN" Type="Authentication Policy Contract" Value="UPN"/>
+                            <urn:AttributeMap Name="ImmutableID" Type="Authentication Policy Contract" Value="ImmutableID"/>
+                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
                             <urn:AttributeMap Name="SAML_NAME_FORMAT" Type="Text" Value="urn:oasis:names:tc:SAML:1.1:nameidformat:unspecified"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>
                         </urn:DefaultAttributeMapping>

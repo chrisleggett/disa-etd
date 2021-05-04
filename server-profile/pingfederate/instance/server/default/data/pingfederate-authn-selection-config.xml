@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1619749777786" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1620148460714" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="m365" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -35,9 +35,16 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="x509ID" Value="SubjectDN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="UPN" Type="Adapter" AttributeSourceId="x509ID" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="ImmutableID" Type="LDAP" AttributeSourceId="AD" Value="objectGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="x509ID" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-2BCBE93812F6E0D46BD3052E63F557E7309EF1BF" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                                    <urn1:Parameter Name="filter" Value="userPrincipalName=${ad.x509ID.userPrincipalName}"/>
+                                    <urn1:Parameter Name="search_base" Value="dc=pingchanneldemo,dc=com"/>
+                                    <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                                    <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+                                    <urn1:BinaryAttributeEncoding Name="objectGUID" Encoding="BASE64"/>
+                                </urn1:AttributeSource>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
@@ -55,9 +62,9 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="UPN" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="sub" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
@@ -76,9 +83,16 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="OTP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="UPN" Type="LDAP" AttributeSourceId="AD" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="ImmutableID" Type="LDAP" AttributeSourceId="AD" Value="objectGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="LDAP" AttributeSourceId="AD" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-2BCBE93812F6E0D46BD3052E63F557E7309EF1BF" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                                    <urn1:Parameter Name="filter" Value="sAMAccountName=${ad.11.username}"/>
+                                    <urn1:Parameter Name="search_base" Value="dc=pingchanneldemo,dc=com"/>
+                                    <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                                    <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+                                    <urn1:BinaryAttributeEncoding Name="objectGUID" Encoding="BASE64"/>
+                                </urn1:AttributeSource>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
