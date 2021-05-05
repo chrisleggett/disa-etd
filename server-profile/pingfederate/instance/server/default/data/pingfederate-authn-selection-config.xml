@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1620148460714" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1620150917512" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="m365" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -63,7 +63,7 @@
                         <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
                                 <urn1:AttributeMap Name="UPN" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="ImmutableID" Type="Expression" Value="#result = @com.pingidentity.common.util.B64@encode(#this.get(&quot;idp.https://idp.int.identitysandbox.gov/.sub&quot;).toString().getBytes())" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
