@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PolicyFragment id="GOwi4OL9FCZ7PxeX" name="Login.gov" inputContractId="p18qP6kOnVc8hSIb" outputContractId="p18qP6kOnVc8hSIb" lastModifiedMillis="1620183465897" xmlns:urn="urn:pingidentity.com:pf:policy:fragment">
+    <urn:policy context="">
+        <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <urn:AuthnSourceKey type="IDP_CONN">Vnc4Wo1hwzz8Gh_G1-ucsr8xc8.</urn:AuthnSourceKey>
+            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+        </urn:AstAction>
+        <urn1:AstChild context="Fail" xmlns:urn1="urn:pingidentity.com:pf:authn-selection">
+            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </urn1:AstChild>
+        <urn1:AstChild context="Success" xmlns:urn1="urn:pingidentity.com:pf:authn-selection">
+            <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <urn:AttributeMapping>
+                    <urn2:AttributeMap Name="UPN" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="sub" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                    <urn2:AttributeMap Name="ImmutableID" Type="Expression" Value=" #result = @com.pingidentity.common.util.B64@encode(#this.get(&quot;idp.https://idp.int.identitysandbox.gov/.sub&quot;).toString().getBytes())" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                    <urn2:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." Value="sub" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                    <urn2:TokenAuthorizationIssuanceCriteria xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                </urn:AttributeMapping>
+            </urn:AstAction>
+        </urn1:AstChild>
+    </urn:policy>
+</urn:PolicyFragment>

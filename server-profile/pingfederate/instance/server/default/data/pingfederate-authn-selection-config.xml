@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1620150917512" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1620183760653" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="true" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
-        <urn:AuthnSelectionTree treeName="m365" disabled="false" authnApiApp="">
+        <urn:AuthnSelectionTree treeName="m365" disabled="true" authnApiApp="">
             <urn:AstRoot context="">
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">11</urn:AuthnSourceKey>
@@ -96,6 +96,136 @@
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
+                    </urn:AstChild>
+                </urn:AstChild>
+            </urn:AstRoot>
+        </urn:AuthnSelectionTree>
+        <urn:AuthnSelectionTree treeName="m365 - Advanced" disabled="false" authnApiApp="">
+            <urn:AstRoot context="">
+                <urn:AstAction authnSelectorId="HTTPRP" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <urn:AstChild context="cleggett@pingchanneldemo.com">
+                    <urn:AstAction fragmentId="GOwi4OL9FCZ7PxeX" xsi:type="urn:FragmentActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:AttributeMapping>
+                            <urn1:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="subject" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        </urn:AttributeMapping>
+                    </urn:AstAction>
+                    <urn:AstChild context="Fail">
+                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </urn:AstChild>
+                    <urn:AstChild context="Success">
+                        <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AttributeMapping>
+                                <urn1:AttributeMap Name="UPN" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="UPN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="ImmutableID" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="ImmutableID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            </urn:AttributeMapping>
+                        </urn:AstAction>
+                    </urn:AstChild>
+                </urn:AstChild>
+                <urn:AstChild context="No Match">
+                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:AuthnSourceKey type="ADAPTER">11</urn:AuthnSourceKey>
+                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:attributeRule>
+                            <urn:IncomingAttr>policy.action</urn:IncomingAttr>
+                            <urn:Operand>EQUALS</urn:Operand>
+                            <urn:ExpectedValue>Login.gov</urn:ExpectedValue>
+                            <urn:Result>Login.gov</urn:Result>
+                        </urn:attributeRule>
+                        <urn:attributeRule>
+                            <urn:IncomingAttr>policy.action</urn:IncomingAttr>
+                            <urn:Operand>EQUALS</urn:Operand>
+                            <urn:ExpectedValue>PIV / CAC</urn:ExpectedValue>
+                            <urn:Result>PIV / CAC</urn:Result>
+                        </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+                    </urn:AstAction>
+                    <urn:AstChild context="Fail">
+                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </urn:AstChild>
+                    <urn:AstChild context="Login.gov">
+                        <urn:AstAction fragmentId="GOwi4OL9FCZ7PxeX" xsi:type="urn:FragmentActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:AttributeMapping>
+                                <urn1:AttributeMap Name="UPN" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            </urn:AttributeMapping>
+                        </urn:AstAction>
+                        <urn:AstChild context="Fail">
+                            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </urn:AstChild>
+                        <urn:AstChild context="Success">
+                            <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:AttributeMapping>
+                                    <urn1:AttributeMap Name="UPN" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="UPN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="ImmutableID" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="ImmutableID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="subject" Type="Fragment" AttributeSourceId="GOwi4OL9FCZ7PxeX" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:AttributeMapping>
+                            </urn:AstAction>
+                        </urn:AstChild>
+                    </urn:AstChild>
+                    <urn:AstChild context="PIV / CAC">
+                        <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AuthnSourceKey type="ADAPTER">x509ID</urn:AuthnSourceKey>
+                            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+                        </urn:AstAction>
+                        <urn:AstChild context="Fail">
+                            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </urn:AstChild>
+                        <urn:AstChild context="Success">
+                            <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:AttributeMapping>
+                                    <urn1:AttributeMap Name="UPN" Type="Adapter" AttributeSourceId="x509ID" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="ImmutableID" Type="LDAP" AttributeSourceId="AD" Value="objectGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="x509ID" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-2BCBE93812F6E0D46BD3052E63F557E7309EF1BF" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                                        <urn1:Parameter Name="filter" Value="userPrincipalName=${ad.x509ID.userPrincipalName}"/>
+                                        <urn1:Parameter Name="search_base" Value="dc=pingchanneldemo,dc=com"/>
+                                        <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                                        <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+                                        <urn1:BinaryAttributeEncoding Name="objectGUID" Encoding="BASE64"/>
+                                    </urn1:AttributeSource>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:AttributeMapping>
+                            </urn:AstAction>
+                        </urn:AstChild>
+                    </urn:AstChild>
+                    <urn:AstChild context="Success">
+                        <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AuthnSourceKey type="ADAPTER">OTP</urn:AuthnSourceKey>
+                            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="11" Value="username"/>
+                            <urn:userIdAuthenticated>true</urn:userIdAuthenticated>
+                        </urn:AstAction>
+                        <urn:AstChild context="Fail">
+                            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </urn:AstChild>
+                        <urn:AstChild context="Success">
+                            <urn:AstAction apcId="p18qP6kOnVc8hSIb" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:AttributeMapping>
+                                    <urn1:AttributeMap Name="UPN" Type="LDAP" AttributeSourceId="AD" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="ImmutableID" Type="LDAP" AttributeSourceId="AD" Value="objectGUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="subject" Type="LDAP" AttributeSourceId="AD" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-2BCBE93812F6E0D46BD3052E63F557E7309EF1BF" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                                        <urn1:Parameter Name="filter" Value="sAMAccountName=${ad.11.username}"/>
+                                        <urn1:Parameter Name="search_base" Value="dc=pingchanneldemo,dc=com"/>
+                                        <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                                        <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+                                        <urn1:BinaryAttributeEncoding Name="objectGUID" Encoding="BASE64"/>
+                                    </urn1:AttributeSource>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:AttributeMapping>
+                            </urn:AstAction>
+                        </urn:AstChild>
                     </urn:AstChild>
                 </urn:AstChild>
             </urn:AstRoot>

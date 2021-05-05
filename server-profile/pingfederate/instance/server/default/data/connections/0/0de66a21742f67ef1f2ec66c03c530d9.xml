@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:EntityDescriptor entityID="https://idp.int.identitysandbox.gov/" urn:name="LoginDotGov OIDC" ID="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+<md:EntityDescriptor entityID="https://idp.int.identitysandbox.gov/" urn:name="LoginDotGov OIDC" ID="Vnc4Wo1hwzz8Gh_G1-ucsr8xc8." urn:LogLevel="FULL" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
         <urn:EntityExtension PFVersion="10.2.2.0" LicenseGroup="">
             <urn:DigitialSignatureAliases/>
@@ -20,7 +20,7 @@
     </md:Extensions>
     <md:IDPSSODescriptor protocolSupportEnumeration="OIDC" WantAuthnRequestsSigned="false">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2021-04-30T00:45:04.547Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2021-05-05T02:40:31.661Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
                 <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
@@ -53,7 +53,7 @@
     </md:IDPSSODescriptor>
     <md:RoleDescriptor protocolSupportEnumeration="OIDC" xsi:type="urn:PFOIDCRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <md:Extensions>
-            <urn:RoleExtension LastModified="2021-04-30T00:45:04.547Z"/>
+            <urn:RoleExtension LastModified="2021-05-05T02:40:31.661Z"/>
         </md:Extensions>
         <urn:OpenIDConnectSettings>
             <urn:TokenEndpoint>https://idp.int.identitysandbox.gov/api/openid_connect/token</urn:TokenEndpoint>
